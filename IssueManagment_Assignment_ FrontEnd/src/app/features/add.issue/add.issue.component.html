@@ -1,0 +1,51 @@
+<div class="container">  <h3>Add New Issue</h3>
+</div>
+<div class="form-container">
+
+  <form [formGroup]="issueForm" (ngSubmit)="onSubmit()">
+    <label for="issueId">Issue ID</label>
+    <input type="text" id="issueId" formControlName="issueId" />
+    <div class="error" *ngIf="issueForm.get('issueId')?.touched && issueForm.get('issueId')?.invalid">
+      Issue ID must be a positive number.
+    </div>
+
+    <label for="title">Title</label>
+    <input type="text" id="title" formControlName="title" />
+    <div class="error" *ngIf="issueForm.get('title')?.touched && issueForm.get('title')?.invalid">
+      Title is required.
+    </div>
+
+    <label for="description">Description</label>
+    <textarea id="description" formControlName="description"></textarea>
+    <div class="error" *ngIf="issueForm.get('description')?.touched && issueForm.get('description')?.invalid">
+      Description is required.
+    </div>
+    <label for="severity">severity</label>
+    <select id="severity" formControlName="severity">
+      <option value="critical">critical</option>
+      <option value="minor">minor</option>
+      <option value="major">major</option>
+    </select>
+
+    <label for="status">Status</label>
+    <select id="status" formControlName="status">
+      <option value="open">Open</option>
+      <option value="in-progress">In Progress</option>
+      <option value="closed">Closed</option>
+    </select>
+
+    <label for="createdBy">Created By</label>
+    <input type="text" id="createdBy" formControlName="createdBy" />
+    <div class="error" *ngIf="issueForm.get('createdBy')?.touched && issueForm.get('createdBy')?.invalid">
+      Created By is required.
+    </div>
+
+    <label for="assignedTo">Assigned To</label>
+    <input type="text" id="assignedTo" formControlName="assignedTo" />
+    <div class="error" *ngIf="issueForm.get('assignedTo')?.touched && issueForm.get('assignedTo')?.invalid">
+      Assigned To is required.
+    </div>
+
+    <button type="submit" [disabled]="issueForm.invalid">Submit</button>
+  </form>
+</div>

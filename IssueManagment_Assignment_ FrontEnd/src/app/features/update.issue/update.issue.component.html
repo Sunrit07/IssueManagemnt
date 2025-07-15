@@ -1,0 +1,35 @@
+<div class="update-container">
+  <h2>Update Issue</h2>
+
+  <form [formGroup]="issueForm" (ngSubmit)="onSubmit()">
+    <label>Title:</label>
+    <input formControlName="title" />
+
+    <label>Description:</label>
+    <textarea formControlName="description"></textarea>
+
+    <label>severity:</label>
+    <select formControlName="severity">
+      <option value="critical">critical</option>
+      <option value="minor">minor</option>
+      <option value="major">major</option>
+    </select>
+
+    <label>Status:</label>
+    <select formControlName="status">
+      <option value="open">Open</option>
+      <option value="in-progress">In Progress</option>
+      <option value="closed">Closed</option>
+    </select>
+
+    <label>Created By:</label>
+    <input formControlName="createdBy" />
+
+    <label>Assigned To:</label>
+    <input formControlName="assignedTo" />
+
+    <!-- <button type="submit">Update</button> -->
+    <button type="submit" [disabled]="issueForm.invalid">Update</button>
+
+  </form>
+</div>

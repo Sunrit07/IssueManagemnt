@@ -1,0 +1,200 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.issue-container {
+  max-width: 1000px;
+  height: 550px;
+  margin: 30px auto;
+  padding: 20px;
+
+}
+
+.no-issues {
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 20px;
+  color: #888;
+}
+
+.container {
+  margin-bottom: 20px;
+}
+
+.container h3 {
+  text-align: center;
+  color: #007bff;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.container input[type="text"] {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.container input[type="text"]:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+
+
+ .card {
+  width: 90%;
+  max-width: 480px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  margin: 20px auto;
+  padding: 20px 24px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.015);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.card-header h3 {
+  font-size: 18px;
+  color: #007bff;
+  margin: 0;
+}
+
+.status-label {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.status-label.open {
+  background-color: #17a2b8;
+  color: #fff;
+}
+
+.status-label.on-progress {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.status-label.closed {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.issue-id {
+  font-size: 12px;
+  color: #888;
+}
+
+.description {
+  font-size: 14px;
+  color: #444;
+  margin: 6px 0 10px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+  margin: 4px 0;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.severity-label {
+  padding: 5px 12px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.severity-label.critical {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.severity-label.major {
+  background-color: #fd7e14;
+  color: #fff;
+}
+
+.severity-label.minor {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.edit-btn {
+  padding: 8px 14px;
+  font-size: 13px;
+  background-color: #6f42c1;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.edit-btn:hover {
+  background-color: #5936a2;
+  transform: scale(1.05);
+}
+
+.delete-btn {
+  padding: 8px 14px;
+  font-size: 13px;
+  background-color: #f9ece7;
+  color: #d10e0e;
+  border: 1px solid #d10e0e ;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color:  #d10e0e;
+  color:white;
+  transform: scale(1.05);
+}
+.show-btn{
+    padding: 8px 14px;
+  font-size: 13px;
+  background-color: none;
+  color: #6f42c1;
+  border: 1px solid #6f42c1 ;
+  border-radius: 8px;
+  cursor: pointer;
+
+}
+.show-btn:hover {
+  background-color:  #6f42c1;
+  color:white;
+  transform: scale(1.05);
+}
