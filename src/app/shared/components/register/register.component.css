@@ -1,0 +1,64 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f7f8;
+  min-height: 100vh;
+  padding: 24px;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  box-sizing: border-box;
+}
+
+.form-container {
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 20px;
+  padding: 24px;
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh; 
+  overflow-y: auto; 
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.03);
+  transition: box-shadow 0.2s ease;
+}
+
+.form-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.form-container::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: #f7f7f8;
+  border-radius: 12px;
+  padding-left: 8px;
+}
+
+button[type='submit'] {
+  align-self: flex-end;
+  margin-top: 10px;
+  background-color: #10a37f;
+  color: white;
+  padding: 10px 20px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+
+button[type='submit']:hover {
+  background-color: #0e8c6c;
+}

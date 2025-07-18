@@ -1,0 +1,57 @@
+<div class="issue-container">
+  <div *ngIf="issues.length === 0 ;else  displayList " class="no-issues">
+    <h3> No issues found.</h3>
+  </div>
+
+
+
+
+  <ng-template class="displayList" #displayList>
+
+    <div class="container">
+      <h3>All ISSUES</h3>
+    </div>
+    <div class="container">
+      <input type="text" placeholder="filter by issue title or status" [(ngModel)]="filterBy" name="" id="">
+
+    </div>
+    <div class="card" *ngFor="let issue of getFilterdIssues()">
+
+
+      <app-issue-details *ngIf="selectedIssue && selectedIssue==issue" [issue]="selectedIssue" (deleteIssue)="deletIssueById($event)" (showLess)="showLessDetails($event)"></app-issue-details>
+
+        <div class="unselectecd" *ngIf="selectedIssue!=issue">
+        
+      <div class="card-header">
+        
+        <h3><span> Issue Title :</span>{{ issue.title }}</h3>
+
+      </div>
+    
+
+
+      <div class="card-footer">
+        <span class="status-label" [ngClass]="issue.status">{{ issue.status }}</span>
+
+        <span class="severity-label" [ngClass]="issue.severity">{{ issue.severity }}</span>
+
+        <span class="show-btn" (click)="showDetails(issue)">showDetails  </span>
+
+      </div>
+      </div>
+
+
+      
+
+    </div>
+
+
+
+  </ng-template>
+
+
+
+
+
+
+</div>

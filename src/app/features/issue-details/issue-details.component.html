@@ -1,0 +1,28 @@
+<div *ngIf="issue" class="showIssueDetails">
+
+
+      <div class="card-header">
+        <h3>{{ issue.title }}</h3>
+        <span class="status-label" [ngClass]="issue.status">{{ issue.status }}</span>
+
+      </div>
+
+      <p class="issue-id">ID: {{ issue.issueId }}</p>
+      <p class="description">{{ issue.description }}</p>
+
+      <p><strong>Created By:</strong> {{ issue.createdBy }}</p>
+      <p><strong>Assigned To:</strong> {{ issue.assignedTo }}</p>
+
+      <div class="card-footer">
+        <span class="severity-label" [ngClass]="issue.severity">{{ issue.severity }}</span>
+
+        <button class="edit-btn" (click)="onChangeStatus(issue.issueId)">✏️ Update Status</button>
+        <span class="delete-btn" (click)="deletIssueById(issue.issueId)">delete X</span>
+        <span class="close-btn" (click)="closeExpansion(issue.issueId)">closeExpansion ^</span>
+
+      </div>
+
+    </div>
+
+
+
