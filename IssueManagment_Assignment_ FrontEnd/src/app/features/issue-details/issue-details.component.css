@@ -1,14 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
 
-
-
- .card {
+.card {
   width: 90%;
-  max-width: 480px;
+  max-width: 500px;
   background-color: #ffffff;
   border-radius: 16px;
   margin: 20px auto;
-  padding: 20px 24px;
+  padding: 24px 28px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
@@ -46,8 +54,8 @@
 }
 
 .status-label.in-progress {
-  background-color: #ffc107;
-  color: #000;
+  background-color: #f904e0;
+  color: #fff;
 }
 
 .status-label.closed {
@@ -55,15 +63,13 @@
   color: #fff;
 }
 
-.issue-id {
-  font-size: 12px;
-  color: #888;
-}
-
-.description {
+.issue-id,
+.description,
+.created-by,
+.issued-by {
   font-size: 14px;
   color: #444;
-  margin: 6px 0 10px;
+  margin: 6px 0;
 }
 
 .card p {
@@ -76,41 +82,50 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 12px;
+  margin-top: 16px;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
-.severity-label {
-  padding: 5px 12px;
-  border-radius: 12px;
-  font-size: 13px;
+.card-footer .severity-label,
+.card-footer .edit-btn,
+.card-footer .delete-btn,
+.card-footer .close-btn {
+  flex: 1 1 calc(25% - 10px);
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
   font-weight: 500;
+  border-radius: 10px;
   text-transform: capitalize;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
+/* Severity Labels */
 .severity-label.critical {
   background-color: #dc3545;
   color: #fff;
+  border: none;
 }
 
 .severity-label.major {
   background-color: #fd7e14;
   color: #fff;
+  border: none;
 }
 
 .severity-label.minor {
   background-color: #ffc107;
   color: #000;
+  border: none;
 }
 
+/* Update Status */
 .edit-btn {
-  padding: 8px 14px;
-  font-size: 13px;
   background-color: #6f42c1;
   color: #fff;
   border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .edit-btn:hover {
@@ -118,34 +133,28 @@
   transform: scale(1.05);
 }
 
+/* Delete */
 .delete-btn {
-  padding: 8px 14px;
-  font-size: 13px;
-  background-color: none;
+  background-color: transparent;
   color: #d10e0e;
-  border: 1px solid #d10e0e ;
-  border-radius: 8px;
-  cursor: pointer;
+  border: 1px solid #d10e0e;
 }
 
 .delete-btn:hover {
-  background-color:  #d10e0e;
-  color:white;
+  background-color: #d10e0e;
+  color: white;
   transform: scale(1.05);
 }
 
+/* Close Expansion */
 .close-btn {
-  padding: 8px 14px;
-  font-size: 13px;
-  background-color:none;
+  background-color: transparent;
   color: #299f99;
-  border: 1px solid #299f99 ;
-  border-radius: 8px;
-  cursor: pointer;
+  border: 1px solid #299f99;
 }
 
 .close-btn:hover {
-  background-color:  #299f99;
-  color:white;
+  background-color: #299f99;
+  color: white;
   transform: scale(1.05);
 }

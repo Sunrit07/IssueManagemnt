@@ -1,0 +1,136 @@
+/* Root Reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f7f7f8; /* Light background like ChatGPT */
+}
+
+/* Login Page Layout */
+.login-page {
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f7f8;
+  overflow: hidden;
+}
+
+/* Login Container Card */
+.login-container {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 40px 30px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+  color: #333;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Heading */
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 24px;
+  color: #222;
+}
+
+/* Form Group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+.styled-input {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fafafa;
+  color: #333;
+  font-size: 14px;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.styled-input:focus {
+  outline: none;
+  border-color: #999;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 500;
+  background-color: #10a37f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover:not(:disabled) {
+  background-color: #0e8f72;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Error Message */
+.error {
+  color: #d33;
+  background-color: #fdd;
+  padding: 8px;
+  border-radius: 4px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Register Link */
+.regNavigate {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.regNavigate a {
+  color: #555;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.regNavigate a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .login-container {
+    padding: 30px 20px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .styled-input {
+    font-size: 13px;
+  }
+}

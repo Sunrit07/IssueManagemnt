@@ -7,7 +7,7 @@
 
       </div>
 
-      <p class="issue-id">ID: {{ issue.issueId }}</p>
+      <p class="issue-id"><strong>ID:</strong> {{ issue.issueId }}</p>
       <p class="description">{{ issue.description }}</p>
 
       <p><strong>Created By:</strong> {{ issue.createdBy }}</p>
@@ -16,9 +16,9 @@
       <div class="card-footer">
         <span class="severity-label" [ngClass]="issue.severity">{{ issue.severity }}</span>
 
-        <button class="edit-btn" (click)="onChangeStatus(issue.issueId)">✏️ Update Status</button>
-        <span class="delete-btn" (click)="deletIssueById(issue.issueId)">delete X</span>
-        <span class="close-btn" (click)="closeExpansion(issue.issueId)">closeExpansion ^</span>
+        <button class="edit-btn" (click)="onChangeStatus(issue.issueId)">✏️Update_Status</button>
+        <span class="delete-btn" (click)="deletIssueById(issue.issueId)">Delete X</span>
+        <span class="close-btn" (click)="closeExpansion(issue.issueId)">Close <span style="font-size: 15px;">🔼</span></span>
 
       </div>
 

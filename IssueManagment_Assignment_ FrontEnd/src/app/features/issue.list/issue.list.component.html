@@ -33,10 +33,13 @@
       <div class="card-footer">
         <span class="status-label" [ngClass]="issue.status">{{ issue.status }}</span>
 
+        
         <span class="severity-label" [ngClass]="issue.severity">{{ issue.severity }}</span>
 
-        <span class="show-btn" (click)="showDetails(issue)">showDetails  </span>
 
+        <div style="display: flex; justify-content: flex-end;">
+        <span class="show-btn" (click)="showDetails(issue)">ShowDetails  </span>
+          </div>
       </div>
       </div>
 

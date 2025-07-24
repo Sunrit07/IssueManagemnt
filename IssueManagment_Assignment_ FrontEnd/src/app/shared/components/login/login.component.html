@@ -1,0 +1,42 @@
+<div class="login-page">
+
+  <div class="login-container">
+    <form (ngSubmit)="onLogin()" #loginForm="ngForm" autocomplete="off">
+      <h2>Login</h2>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          placeholder="Enter your email"
+          [(ngModel)]="email" 
+          required 
+          class="styled-input"
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input 
+          type="password" 
+          id="password" 
+          name="password" 
+          placeholder="Enter your password"
+          [(ngModel)]="password" 
+          required 
+          class="styled-input"
+        >
+      </div>
+
+      <div class="error" *ngIf="error">{{ error }}</div>
+
+      <button type="submit" [disabled]="!loginForm.valid">Login</button>
+
+      <div class="regNavigate">
+        <a [routerLink]="['../register']">Don't have an account? Register</a>
+      </div>
+    </form>
+  </div>
+</div>

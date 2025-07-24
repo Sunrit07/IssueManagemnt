@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -12,10 +12,9 @@ body {
 
 .issue-container {
   max-width: 1000px;
-  height: 550px;
+  min-height: 550px;
   margin: 30px auto;
   padding: 20px;
-
 }
 
 .no-issues {
@@ -50,16 +49,14 @@ body {
   border-color: #007bff;
 }
 
-
-
- .card {
-  width: 90%;
-  max-width: 480px;
+.card {
+  width: 95%;
+  max-width: 600px;
   background-color: #ffffff;
   border-radius: 16px;
-  margin: 20px auto;
-  padding: 20px 24px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  margin: 24px auto;
+  padding: 24px 28px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
   transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
@@ -81,6 +78,26 @@ body {
   margin: 0;
 }
 
+.severity-label{
+  
+   padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+.show-btn {
+  flex: 1 1 calc(33.333% - 10px);
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  border-radius: 10px;
+  font-weight: 500;
+  white-space: nowrap;
+  text-transform: capitalize;
+}
+
 .status-label {
   padding: 4px 10px;
   border-radius: 12px;
@@ -90,14 +107,15 @@ body {
   white-space: nowrap;
 }
 
+
 .status-label.open {
   background-color: #17a2b8;
   color: #fff;
 }
 
-.status-label.on-progress {
-  background-color: #ffc107;
-  color: #000;
+.status-label.in-progress {
+  background-color: #f904e0;
+  color: #fff;
 }
 
 .status-label.closed {
@@ -124,17 +142,11 @@ body {
 
 .card-footer {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  margin-top: 12px;
-}
-
-.severity-label {
-  padding: 5px 12px;
-  border-radius: 12px;
-  font-size: 13px;
-  font-weight: 500;
-  text-transform: capitalize;
+  margin-top: 16px;
+  /* gap: px; */
+  flex-wrap: wrap;
 }
 
 .severity-label.critical {
@@ -173,28 +185,33 @@ body {
   font-size: 13px;
   background-color: #f9ece7;
   color: #d10e0e;
-  border: 1px solid #d10e0e ;
+  border: 1px solid #d10e0e;
   border-radius: 8px;
   cursor: pointer;
 }
 
 .delete-btn:hover {
-  background-color:  #d10e0e;
-  color:white;
+  background-color: #d10e0e;
+  color: white;
   transform: scale(1.05);
 }
-.show-btn{
-    padding: 8px 14px;
-  font-size: 13px;
-  background-color: none;
-  color: #6f42c1;
-  border: 1px solid #6f42c1 ;
-  border-radius: 8px;
-  cursor: pointer;
 
+.show-btn {
+   padding: 4px 10px;
+  border-radius: 13px;
+  font-size: 13px;
+  /* font-weight: 500;
+  text-transform: capitalize;
+  white-space: nowrap; */
+  background-color: transparent;
+  color: #6f42c1;
+  border: 1px solid #6f42c1;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
 .show-btn:hover {
-  background-color:  #6f42c1;
-  color:white;
+  background-color: #6f42c1;
+  color: white;
   transform: scale(1.05);
 }
