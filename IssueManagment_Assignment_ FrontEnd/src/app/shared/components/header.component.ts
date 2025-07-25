@@ -52,5 +52,10 @@ export class HeaderComponent implements OnInit {
 
   // }
   
+export class HeaderComponent {
+
+  title:string="ISSUE MANAGEMENT"
+  console.log("Header Component Loaded");
+
 
 }
